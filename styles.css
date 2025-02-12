@@ -35,21 +35,28 @@
 }
 
 .header p {
-    margin-bottom: 32px;
+    margin-bottom: 54px;
     font-size: 26px;
 }
 
-.billing-info input {
+.billing-info input,
+.email input {
     width: 100%;
-    height: 65px;
+    /* height: 65px; */
     border-radius: 15px;
     margin-top: 12px;
+    padding: 25px;
+    font-size: 24px
+}
+
+.payment-method {
+    margin-top: 34px;
 }
 
 .methods {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .methods p {
@@ -61,6 +68,16 @@
     font-size: 24px;
     display: flex;
     flex-direction: column;
+}
+
+.methods p:hover {
+    cursor: pointer;
+}
+
+.methods p.active {
+    background-color: rgba(128, 0, 128, 0.1);
+    border-color: purple;
+    transition: all 0.3s ease;
 }
 
 span img {
@@ -75,6 +92,23 @@ span img {
     padding: 32px 32px 0 32px;
 }
 
+.country-zip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.country,
+.postal-code {
+    width: 48%;
+}
+
+.country input,
+.postal-code input {
+    padding: 25px 10px;
+    width: 100%;
+    border-radius: 15px;
+}
 
 
 

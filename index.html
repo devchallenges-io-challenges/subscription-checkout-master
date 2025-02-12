@@ -108,7 +108,7 @@
         <div class="payment-method">
           <h2>Payment Details</h2>
           <div class="methods">
-            <p><span><img src="./resources/atm-card.svg" /></span>Credit Card</p>
+            <p class="active"><span><img src="./resources/atm-card.svg" /></span>Credit Card</p>
             <p><span><img src="./resources/bank.svg" /></span>Bank Transfer</p>
             <p><span><img src="./resources/point-card.svg" /></span>Points</p>
           </div>
@@ -119,14 +119,16 @@
           <input type="email" placeholder="Enter email address" />
         </div>
 
-        <div class="country">
-          <h2>Country</h2>
-          <input type="text" placeholder="Finland" />
-        </div>
+        <div class="country-zip">
+          <div class="country">
+            <h2>Country</h2>
+            <input type="text" placeholder="Finland" />
+          </div>
 
-        <div class="postal-code">
-          <h2>Postal Code</h2>
-          <input type="text" placeholder="00270" />
+          <div class="postal-code">
+            <h2>Postal Code</h2>
+            <input type="text" placeholder="00270" />
+          </div>
         </div>
 
         <div class="cancel-subscribe">
@@ -162,6 +164,18 @@
     Coded by <a href="#">Your Name Here</a> | Challenge by
     <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
   </div>
+
+  <script>
+
+    const methods = document.querySelectorAll('.methods p');
+
+    methods.forEach(method => {
+      method.addEventListener('click', () => {
+        methods.forEach(m => m.classList.remove('active'));
+        method.classList.add('active');
+      });
+    });
+  </script>
 </body>
 
 </html>
